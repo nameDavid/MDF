@@ -57,4 +57,84 @@ document.addEventListener('DOMContentLoaded', () => {
             closeButton.style.display = 'none';
         }
     });
+
+    // Dropdown Mobile Toggle
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+        const dropbtn = dropdown.querySelector('.dropbtn');
+        
+        dropbtn.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Close other dropdowns
+                dropdowns.forEach(d => {
+                    if (d !== dropdown && d.classList.contains('active')) {
+                        d.classList.remove('active');
+                        d.querySelector('.fa-angle-down').style.transform = 'rotate(0)';
+                    }
+                });
+                
+                // Toggle current dropdown
+                dropdown.classList.toggle('active');
+                const icon = dropbtn.querySelector('.fa-angle-down');
+                icon.style.transform = dropdown.classList.contains('active') 
+                    ? 'rotate(180deg)' 
+                    : 'rotate(0)';
+            }
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+                const icon = dropdown.querySelector('.fa-angle-down');
+                if (icon) icon.style.transform = 'rotate(0)';
+            });
+        }
+    });
+
+    // Slider functionality
+    let slideIndex = 1;
+    let slideInterval;
+
+    function showSlides(n) {
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
+        
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[slideIndex - 1].classList.add('active');
+        dots[slideIndex - 1].classList.add('active');
+    }
+
+    function changeSlide(n) {
+        clearInterval(slideInterval);
+        showSlides(slideIndex += n);
+        startAutoSlide();
+    }
+
+    function currentSlide(n) {
+        clearInterval(slideInterval);
+        showSlides(slideIndex = n);
+        startAutoSlide();
+    }
+
+    function startAutoSlide() {
+        slideInterval = setInterval(() => {
+            showSlides(slideIndex += 1);
+        }, 5000); // Change slide every 5 seconds
+    }
+
+    // Initialize slider
+    showSlides(slideIndex);
+    startAutoSlide();
 });

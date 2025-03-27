@@ -40,11 +40,39 @@
                 
                 <div class="nav-links">
                     <a href="#home">Home</a>
-                    <a href="#community">About us</a>
-                    <a href="#research">operations</a>
-                    <a href="#sector">Gallery</a>
-                    <a href="#resources"> News/Documentary</a>
-                    <a href="#contact">links</a>
+                    
+                    <div class="dropdown">
+                        <a href="#Aboutus" class="dropbtn">About us <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#Profile">Profile</a></li>
+                            <li><a href="#Adminisration">Administration</a></li>
+                            <li><a href="#board">Disbursement and utilisation</a></li>
+                            </ul>
+                    </div>
+                
+                    <div class="dropdown">
+                        <a href="#operation" class="dropbtn">Operations <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#mdfprojects">Mdf projects</a></li>
+                            <li><a href="#activites">Activities</a></li>
+                            <li><a href="#Beneficiaries">Beneficiaries</a></li>
+                        </ul>
+                    </div>
+                
+                    <a href="#Gallery">Gallery</a>
+                    <a href="#News/Documentary">News/Documentary</a>
+                    
+                    <div class="dropdown">
+                        <a href="#Downloads" class="dropbtn">Downloads <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#Acts">MDF Act</a></li>
+                            <li><a href="#guidelines">MCDS Guidelines</a></li>
+                            <li><a href="#criteria">criteria For Disbursement</a></li>
+                            <li><a href="#reports">Reports</a></li>
+                        </ul>
+                    </div>
+                
+                    <a href="#Links">Links</a>
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="search">
@@ -58,25 +86,53 @@
         
     </header>
 
+
     <main>
-        <section id="mandate" class="section">
-            <h2>Legal Mandate</h2>
-            <div class="mandate-info">
-                <h3>Act 912 (2016)</h3>
-                <p>The Minerals Development Fund operates under Act 912 (2016), Section 3, establishing our legal framework and operational mandate.</p>
-                
-                <div class="purpose-cards">
-                    <div class="purpose-card">
-                        <h4>Financial Transparency</h4>
-                        <p>View our audited financial reports and funding allocation processes.</p>
-                        <a href="#" class="btn">View Reports</a>
+        <section class="hero">
+            <div class="slider">
+                <div class="slide fade">
+                    <img src="assets/images/s.jpg" alt="Mining Community Development">
+                    <div class="slide-content">
+                        <h1>Supporting Mining Communities</h1>
+                        <p>Providing sustainable development through financial resources</p>
+                        <a href="#projects" class="cta-button">View Projects</a>
                     </div>
-                    <!-- Add more purpose cards -->
+                </div>
+
+                <div class="slide fade">
+                    <img src="assets/images/mdfgamechanger.jpg" alt="Infrastructure Development">
+                    <div class="slide-content">
+                        <h1>Infrastructure Development</h1>
+                        <p>Building better communities through strategic investments</p>
+                        <a href="#infrastructure" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="slide fade">
+                    <img src="assets/images/slide3.jpg" alt="Community Empowerment">
+                    <div class="slide-content">
+                        <h1>Community Empowerment</h1>
+                        <p>Creating opportunities for sustainable growth</p>
+                        <a href="#programs" class="cta-button">Our Programs</a>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="slider-btn prev" onclick="changeSlide(-1)">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next" onclick="changeSlide(1)">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Dots Navigation -->
+                <div class="slider-dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
         </section>
-
-        <!-- Additional sections will follow similar pattern -->
     </main>
 
     <footer>
