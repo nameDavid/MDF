@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
     searchBtn.addEventListener('click', (e) => {
         e.preventDefault();
         searchBox.classList.add('active');
+        console.log(searchBox);
+  
        
     });
 
@@ -46,11 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close search when clicking outside
     document.addEventListener('click', (e) => {
-        const isClickInside = searchInput.contains(e.target) || 
+        const isClickInside = searchBox.contains(e.target) || 
                             searchBtn.contains(e.target) ||
                             closeButton.contains(e.target);
         
-        if (!isClickInside && searchInput.classList.contains('active')) {
+        if (!isClickInside && searchBox.classList.contains('active')) {
             searchBox.classList.remove('active');
             closeButton.style.display = 'none';
         }
