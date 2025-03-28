@@ -204,10 +204,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add animation delays to links
-    const links = document.querySelectorAll('.container a');
-    links.forEach((link, index) => {
-        link.style.setProperty('--delay', index + 1);
-    });
+    
+});
+
+const cards = document.querySelectorAll('.attribute-card');
+cards.forEach((card, index) => {
+    card.style.setProperty('--delay', index + 1);
 });
 
 // Add event listener for window resize to close dropdowns if open  
