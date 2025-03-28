@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchBtn = document.querySelector('.search-btn');
     const searchBox = document.querySelector('.search-box');
     const closeButton = document.querySelector('#close-button');
+ 
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dots = document.querySelectorAll('.dot');
+
 
     hamburger.addEventListener('click', () => {
         // Toggle active class for hamburger animation
@@ -137,4 +142,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize slider
     showSlides(slideIndex);
     startAutoSlide();
+
+    prevBtn.addEventListener('click', () => changeSlide(-1));   
+    nextBtn.addEventListener('click', () => changeSlide(1));
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => currentSlide(index + 1));
+    });
+    // Pause slider on hover        
+    const slider = document.querySelector('.slider');
+    slider.addEventListener('mouseover', () => {
+        clearInterval(slideInterval);
+    });
+    slider.addEventListener('mouseout', () => {
+        startAutoSlide();
+    });
+});
+// Add event listener for window resize to close dropdowns if open  
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        const dropdowns = document.querySelectorAll('.dropdown.active');
+        dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('active');
+            const icon = dropdown.querySelector('.fa-angle-down');
+            if (icon) icon.style.transform = 'rotate(0)';
+        });
+    }
+    if (navLinks.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
 });
