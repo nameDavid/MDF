@@ -157,7 +157,53 @@ document.addEventListener('DOMContentLoaded', () => {
     slider.addEventListener('mouseout', () => {
         startAutoSlide();
     });
+
+    // News Slider
+    const track = document.querySelector('.news-track');
+    const cards = document.querySelectorAll('.news-card');
+    const prevNewsBtn = document.querySelector('.prev-news');
+    const nextNewsBtn = document.querySelector('.next-news');
+    
+    let currentIndex = 0;
+    const cardWidth = cards[0].offsetWidth + 32; // card width + gap
+    
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+    
+    prevNewsBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
+        }
+    });
+    
+    nextNewsBtn.addEventListener('click', () => {
+        if (currentIndex < cards.length - 3) { // Show 3 cards at a time
+            currentIndex++;
+            updateSlider();
+        }
+    });
+    
+    // Update slider position on window resize
+    window.addEventListener('resize', updateSlider);
+
+    // Newsletter Form Handling
+    const newsletterForm = document.getElementById('newsletterForm');
+    
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('emailInput').value;
+        
+        // Add your newsletter subscription logic here
+        console.log('Newsletter subscription for:', email);
+        
+        // Show success message
+        alert('Thank you for subscribing to our newsletter!');
+        newsletterForm.reset();
+    });
 });
+
 // Add event listener for window resize to close dropdowns if open  
 window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
