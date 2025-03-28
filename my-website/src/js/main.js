@@ -202,6 +202,12 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Thank you for subscribing to our newsletter!');
         newsletterForm.reset();
     });
+
+    // Add animation delays to links
+    const links = document.querySelectorAll('.container a');
+    links.forEach((link, index) => {
+        link.style.setProperty('--delay', index + 1);
+    });
 });
 
 // Add event listener for window resize to close dropdowns if open  
