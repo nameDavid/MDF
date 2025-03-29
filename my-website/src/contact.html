@@ -1,24 +1,19 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Links</title>
+        <title>Contact Us</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/links.css">
-        <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/contact.css">
 
     </head>
 
-    <body>
-         
 
+    <body>
         <header>
             <div class="header-top">
                <div class="contact-info">
@@ -103,34 +98,68 @@
         </header>
 
 
+
+
+        
 <main>
     <div class="hero">
         <div class="hero-text">
-            <h1>Links</h1>
-            <p>Providing Financial Resources To Mining Community for sustainable development</p>
+            <h1>Contact Us</h1>
+            <p>please fill the form below to contact us</p>
         </div>
 
     </div>
-    
-          <div class="container">
-    <h1>
-              STAKEHOLDERS</h1><br><br>
-    <a href="https://mlnr.gov.gh/office-of-the-administrator-of-stool-lands/">OFFICE OF THE ADMINISTRATR OF STOOL LANDS (OASL)</a><br><br>
-        <a href="https://www.mincom.gov.gh/acquiring-mining-license">MINERALS COMMISSION (MC)</a><br><br>
-        <a href="https://ggsa.gov.gh/">GHANA GEOLOGICAL SURVEY AUTTHORITY (GGSA)</a><br><br>
-        <a href="https://mlnr.gov.gh/">MINISTRY OF LANDS AND NATURAL RESOURCES (ML & NR)</a><br><br>
-        <a href="https://www.mdf.gov.gh/operations/disbursement/">MINERALS INCOME INVESTMENT FUND</a><br><br>
-        <a href="">WAGES</a><br><br>
-        <a href="https://www.cedaafrica.org/">CENTRE FOR EXTRACTIVE AND DEVELOPMENT AFRICA (CEDA)</a><br><br>
-        <a href="https://www.star-ghana.org/">WUSCSTAR GHANA</a><br><br>
-        <a href="https://www.gheiti.gov.gh/site/">AUSTRALIAN HIGH COMMISSION</a><br><br>
-        <a href="https://travel.gc.ca/">CANADIAN HIGH COMMISSION</a><br><br>
-    </div>
-</main>
 
 
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.8876747300243!2d-0.1808893!3d5.5675139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9082375c5555%3A0x0!2sNo.2%20Labone%20Link%2C%20Accra%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1234567890" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="form-container">
+                    <div class="container">
+                        <form action="action_page.php">
+                           <b> <label for="fname" style="font-style: italic;"> First Name:</b></label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your first name..." required>
 
+                            <b><label for="lname" style="font-style: italic;"> Last Name:</b></label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..." required >
 
+                            <b><label for="email" style="font-style: italic;"> Email:</b</label>
+                            <input type="email" id="email" name="email" placeholder="Your your email..." required>
+
+                            <b><label for="phone number" style="font-style: italic;"> Phone Number:</b></label>
+                            <input type="tel" id="phone number" name="phone number" placeholder="Your phone number..." required> <br>
+
+                            <b><label for="company's name" style="font-style: italic;"> Company's Name:</b></label>
+                            <input type="text" id="company's name" name="company's name" placeholder="Your company's name..." required>
+
+                            <b<<label for="job title" style="font-style: italic;"> Job Title:</b></label>
+                            <input type="text" id="job title" name="job title" placeholder="Your job title..." required>
+          
+                            <b><label for="subject" style="font-style: italic;">Subject:</b></label>
+                            <textarea id="subject" name="subject" placeholder="Your message.." required ="height: 400px"></textarea>
+
+                            <input type="submit" style="font-style: italic;" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+
+</main>        
+
+            
+ 
 
 
 
@@ -179,10 +208,6 @@
         <p>&copy; 2025 Minerals Development Fund. All rights reserved.</p>
     </div>
 </footer>
-
-<script src="js/main.js"></script>
-<script src="js/link.js"></script>
-
 
     </body>
 </html>
