@@ -5,6 +5,7 @@
 .hero {
     position: relative;
     height: 100vh;
+    height: 57rem;
     width: 100%;
     overflow: hidden;
 }
@@ -35,7 +36,7 @@
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
