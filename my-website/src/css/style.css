@@ -76,11 +76,24 @@ header {
 
 .contact-info i span {
     color: var(--header-text-color);
+    font-size: 0.7rem;
 }
 
 .contact-info i:hover {
     transform: scale(1.1);
     color: var(--header-hover-color);
+}
+
+.logo .logo-name{
+    font-size: 1.5rem;
+    color: #ff3333;
+    font-weight: 600;
+}
+
+.logo .logo-text .logo-tagline{
+    font-size: 0.6rem;
+    color:  #fff;
+    font-weight: 600;
 }
 
 /* Social Media Links */
@@ -203,8 +216,7 @@ header {
 }
 
 .dropdown-content a:hover {
-    background-color: var(--header-hover-color);
-    transform: translateX(10px);
+      transform: translateX(10px);
 }
 
 /* Hamburger Menu for Mobile */
@@ -239,22 +251,22 @@ header {
     z-index: 2;
     left: 0;
     right: 500%;
-    margin-left: 9rem;
+    margin-left: 8rem;
+    margin-right: 5rem;
 }
 
 .welcome {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    display: flex;
     background: var(--primary-color);
     overflow: hidden;
+  
 }
 
 .welcome-image {
-    position: relative;
- overflow: hidden;
+  overflow: hidden;
     animation: fadeInLeft 1s ease forwards 0.3s;
     background: #fff;
-    width: 520px;
+    width: 500px;
     margin-top: 5rem;
 }
 
@@ -274,9 +286,9 @@ header {
     animation: fadeInRight 1s ease forwards 0.5s;
     background: #fff;
     margin-top: 8rem;
-    border: 1px solid rgb(180, 178, 178);
+    border: 1px solid rgba(180, 178, 178, 0.102);
     width: 500px;
-    height: 400px;
+    height: 430px;
     
 }
 
@@ -285,6 +297,7 @@ header {
     font-size: 2rem;
     margin-bottom: 2rem;
     position: relative;
+    margin-top: 2rem;
 }
 
 .welcome-text h2::after {
@@ -301,7 +314,7 @@ header {
 }
 
 .welcome-text p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.8;
     color: var(--text-color1);
     margin-bottom: 1.5rem;
@@ -309,8 +322,25 @@ header {
 
 /* Goals Section */
 .goals {
-    padding: 5rem 10%;
+    padding: 2rem 6%;
     background: var(--light-bg);
+    margin-top: 4rem;
+}
+
+.header-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.header-box a{
+ padding: 0.8rem;
+ padding-left: 1.5rem;
+ padding-right: 1.5rem;
+ background-color: #ff3333;
+ color: #fff;
+ margin-bottom: 3.5rem;
 }
 
 .goals h2 {
@@ -337,14 +367,15 @@ header {
 .goals-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .goal-item {
+     display: flex;
     background: #fff;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(180, 178, 178, 0.236);
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(30px);
@@ -361,33 +392,31 @@ header {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-.goal-item i {
-    font-size: 2.5rem;
+.goal-item .i-side {
+    font-size: 1.5rem;
     color: #fff;
     background: #ff3333;
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    border-radius: 50%;
+    padding:1rem;
+   margin-right: 1rem;
     margin-bottom: 1.5rem;
     transition: all 0.3s ease;
 }
 
-.goal-item:hover i {
+.goal-item:hover .i-side {
     transform: rotateY(360deg);
     background: #cc0000;
 }
 
-.goal-item h3 {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.goal-item .text-area h3 {
+   color: var(--secondary-color);
+    font-size: 1rem;
+  
 }
 
 .goal-item p {
     color: var(--text-color1);
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+
 }
 
 .goal-item a {
@@ -404,7 +433,7 @@ header {
 
 /* Latest News Section */
 .latest-news {
-    padding: 5rem 10%;
+    padding: 2rem 6%;
     background: var(--light-bg);
 }
 
@@ -456,6 +485,7 @@ header {
 }
 
 .news-slider {
+    padding: 5rem;
     overflow: hidden;
     position: relative;
 }
@@ -564,6 +594,7 @@ header {
                 url('../assets/images/newsletter-bg.jpg') center/cover no-repeat fixed;
     position: relative;
     overflow: hidden;
+    padding-bottom:2rem;
 }
 
 .newsletter::before {

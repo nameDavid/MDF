@@ -84,6 +84,11 @@
         border-radius: 0;
     }
 
+    .header-box{
+        display: flex;
+        flex-direction: column;
+}
+
     .header-top {
         border-radius: 0;
         padding: 0.5rem 1rem;
@@ -122,8 +127,11 @@
     }
 
     /* Welcome Section */
+   
     .welcome {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: -150rem;
     }
 
     .welcome-text {
@@ -220,6 +228,15 @@
 
 /* ===== Small Mobile Breakpoint: 480px ===== */
 @media screen and (max-width: 480px) {
+    .welcome{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-box{
+        display: flex;
+        flex-direction: column;
+}
     .contact-info {
         font-size: 0.8rem;
         gap: 0.5rem;
