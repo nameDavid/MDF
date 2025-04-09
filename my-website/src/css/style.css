@@ -699,10 +699,7 @@ header {
 
 
 /* Departments Section */
-.departments {
-    padding: 2rem 6%;
- margin-bottom: 3rem;
-}
+
 
 .departments-grid {
     display: flex;
@@ -731,8 +728,6 @@ header {
     position: relative;
     margin-bottom: 1rem;
 }
-
-
 
 
 .department-box {
@@ -770,11 +765,11 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    padding: 0 2rem 2rem 2rem;
+    padding: 0 4rem 4rem 4rem;
 }
 
 .department-item {
-    background: rgba(253, 245, 245, 0.999);
+    background:#fff;
     padding: 1.5rem;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
