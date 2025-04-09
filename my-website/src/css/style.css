@@ -485,7 +485,8 @@ header {
 }
 
 .news-slider {
-    padding: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     overflow: hidden;
     position: relative;
 }
