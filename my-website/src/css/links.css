@@ -1,9 +1,9 @@
 /* Hero Section Styles */
 .hero {
     position: relative;
-    height: 60vh;
+    height: 90vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('../assets/images/hero-bg.jpg');
+                url('../assets/images/pic11.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -23,6 +23,7 @@
 }
 
 .hero-text h1 {
+    color: #fff;
     font-size: 4rem;
     margin-bottom: 1.5rem;
     opacity: 0;
@@ -31,6 +32,7 @@
 }
 
 .hero-text p {
+    color: #fff;
     font-size: 1.2rem;
     opacity: 0;
     transform: translateY(20px);
@@ -82,8 +84,8 @@
 
 .container a:hover {
     transform: translateY(-3px);
-    background-color: var(--secondary-color);
-    color: var(--text-color2);
+    background-color: #ff3333;
+    color: #fff;
     padding-left: 2.5rem;
 }
 
