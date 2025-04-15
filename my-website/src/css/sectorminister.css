@@ -1,0 +1,259 @@
+.hero {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../assets/images/mdfpic9.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-text {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--text-color2);
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease forwards 0.5s;
+}
+
+.hero-text p {
+    color: #fff;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.8s ease forwards 0.8s;
+}
+
+
+/* Minister Section Styles */
+.minister-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ff3333;
+}
+
+.minister-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.minister-image {
+    position: relative;
+   overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 1s ease forwards 0.3s;
+}
+
+.minister-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.image-overlay h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.image-overlay p {
+    color: #fff;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.minister-image:hover .minister-photo {
+    transform: scale(1.05);
+}
+
+.minister-image:hover .image-overlay {
+    transform: translateY(0);
+}
+
+.minister-info {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: fadeInRight 1s ease forwards 0.6s;
+}
+
+.info-content {
+    margin-bottom: 2rem;
+}
+
+.minister-description {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.minister-quote {
+    position: relative;
+    padding: 2rem;
+    background: #fff;
+    border-left: 4px solid #ff3333;
+    margin-top: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 1s;
+}
+
+.minister-quote i {
+    color: #ff3333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.minister-quote p {
+    font-style: italic;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .minister-content {
+        gap: 2rem;
+    }
+    
+    .minister-quote {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .minister-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .minister-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .minister-description {
+        font-size: 1rem;
+    }
+    
+    .minister-quote p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .minister-section {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .image-overlay {
+        padding: 1rem;
+    }
+    
+    .image-overlay h3 {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,149 @@
+.hero {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../assets/images/mdfpic9.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-text {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--text-color2);
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+   transform: translateY(30px);
+    animation: slideUp 0.8s ease forwards 0.5s;
+}
+
+.hero-text p {
+    color: #fff;
+    font-size: 1.2rem;
+   
+    transform: translateY(20px);
+    animation: slideUp 0.8s ease forwards 0.8s;
+}
+
+.funding-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.funding-section h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.funding-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ff3333;
+}
+
+.funding-section p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.funding-sources {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.funding-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.funding-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.funding-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff3333;
+    margin-right: 1.5rem;
+    min-width: 2rem;
+}
+
+.funding-item p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .funding-section {
+        padding: 4rem 0;
+    }
+
+    .funding-section h2 {
+        font-size: 2rem;
+    }
+
+    .funding-item {
+        padding: 1rem;
+    }
+
+    .funding-letter {
+        font-size: 1.3rem;
+        margin-right: 1rem;
+    }
+
+    .funding-item p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .funding-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .funding-section p {
+        font-size: 1rem;
+    }
+
+    .funding-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .funding-letter {
+        margin-bottom: 0.5rem;
+    }
+}

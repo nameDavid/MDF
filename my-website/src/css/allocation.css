@@ -1,0 +1,138 @@
+.hero {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../assets/images/mdfpic9.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-text {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--text-color2);
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+   transform: translateY(30px);
+    animation: slideUp 0.8s ease forwards 0.5s;
+}
+
+.hero-text p {
+    color: #fff;
+    font-size: 1.2rem;
+   
+    transform: translateY(20px);
+    animation: slideUp 0.8s ease forwards 0.8s;
+}
+
+/* Allocation Section Styles */
+.allocation-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.allocation-section h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.allocation-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ff3333;
+}
+
+.allocation-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.allocation-content p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.allocation-list {
+    list-style-type: none;
+    counter-reset: allocation-counter;
+    padding-left: 0;
+}
+
+.allocation-list li {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 2.5rem;
+    counter-increment: allocation-counter;
+}
+
+.allocation-list li::before {
+    content: counter(allocation-counter) ".";
+    position: absolute;
+    left: 0;
+    color: #ff3333;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .allocation-section {
+        padding: 3rem 0;
+    }
+
+    .allocation-section h2 {
+        font-size: 2rem;
+    }
+
+    .allocation-content {
+        padding: 1.5rem;
+    }
+
+    .allocation-list li {
+        font-size: 1rem;
+        padding-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .allocation-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .allocation-content {
+        padding: 1rem;
+    }
+}

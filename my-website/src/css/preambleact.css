@@ -1,0 +1,258 @@
+.hero {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../assets/images/mdfpic9.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-text {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--text-color2);
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease forwards 0.5s;
+}
+
+.hero-text p {
+    color: #fff;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.8s ease forwards 0.8s;
+}
+
+
+
+
+
+/* Preamble Section Styles */
+.preamble-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.preamble-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.preamble-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.mandate-box,
+.object-box {
+    background: #ffffff;
+    padding: 3rem;
+    border: 1px solid #e0dbdb;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mandate-box::before,
+.object-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ff3333;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.mandate-box:hover,
+.object-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mandate-box:hover::before,
+.object-box:hover::before {
+    transform: scaleX(1);
+}
+
+.mandate-box h3,
+.object-box h3 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+    font-weight: 600;
+}
+
+.mandate-box h3::after,
+.object-box h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #ff3333;
+    transition: width 0.3s ease;
+}
+
+.mandate-box:hover h3::after,
+.object-box:hover h3::after {
+    width: 100px;
+}
+
+.mandate-box p,
+.object-box p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.object-box ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.object-box li {
+    color: #666;
+    padding: 1rem 0;
+    padding-left: 2.5rem;
+    position: relative;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.object-box li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1.4rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff3333;
+    transition: all 0.3s ease;
+}
+
+.object-box li:hover {
+    transform: translateX(10px);
+    color: #333;
+}
+
+.object-box li:hover::before {
+    transform: scale(1.5);
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .preamble-section {
+        padding: 4rem 0;
+    }
+
+    .mandate-box,
+    .object-box {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .preamble-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .mandate-box h3,
+    .object-box h3 {
+        font-size: 1.8rem;
+    }
+
+    .mandate-box p,
+    .object-box p,
+    .object-box li {
+        font-size: 1rem;
+    }
+
+    .mandate-box,
+    .object-box {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mandate-box h3,
+    .object-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}

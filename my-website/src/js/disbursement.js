@@ -29,6 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(item);
     });
 
+    // Add fade-in to disbursement chart
+    const disbursementChart = document.querySelector('.disbursement-chart');
+    if (disbursementChart) {
+        disbursementChart.classList.add('fade-in');
+        observer.observe(disbursementChart);
+    }
+
     // Handle expandable table cells
     const expandableCells = document.querySelectorAll('.utilization-table td.expandable');
     expandableCells.forEach(cell => {

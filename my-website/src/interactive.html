@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map System - Minerals Development Fund (MDF)</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <header>
+            <div class="header-top">
+                <div class="contact-info">
+                    <i class="fa-solid fa-phone"> <span>+233 552 487499</span></i>
+                    <i class="fa-solid fa-envelope"> <span>info@mdf.gov.gh</span></i>
+                </div>
+                <div class="social-media">
+                    <a href="https://web.facebook.com/p/Minerals-Development-Fund-100075951260058/?_rdc=1&_rdr"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/MDF_GHANA"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/mineralsdevelopmentfund/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+    
+            <div class="page-nav">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="assets/images/mdflogo.png" alt="MDF Logo">
+                        <div class="logo-text">
+                            <p class="logo-name">MDF</p>
+                            <span class="logo-tagline">Minerals Development Fund</span>
+                        </div>   
+                    </a>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="./index.html">Home</a>
+                    <div class="dropdown">
+                        <a href="#Aboutus" class="dropbtn">About us <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="./profile.html">Profile</a></li>
+                            <li><a href="./administration.html">Administration</a></li>
+                            <li><a href="./organogram.html">organogram</a></li>
+                            <li><a href="./disbursement.html">Disbursement and utilisation</a></li>
+                            <li><a href="./preambleact.html">Preamble Of Mdf Act</a></li>
+                            <li><a href="./board.html">The MDF Board</a></li>
+                            <li><a href="./funding.html">Funding source</a></li>
+                            <li><a href="./allocation.html">Disbursement Allocation</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#operation" class="dropbtn">Operations <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="./interactive.html">Mdf projects</a></li>
+                            <li><a href="./mcds.html">Activities</a></li>
+                            <li><a href="./beneficiaries.html">Beneficiaries</a></li>
+                        </ul>
+                    </div>
+                    <a href="./gallery.html">Gallery</a>
+                    <a href="./news.html">News/Documentary</a>
+                    <a href="./downloads.html" class="dropbtn">Downloads </a>
+                        
+                    <a href="./links.html">Links</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+            </div>
+        </header>
+
+    
+
+
+
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Interactive Map</h1>
+                <p>Explore MDF's impact across Ghana's mining communities through our interactive project map</p>
+            </div>
+    
+        </div>
+
+
+
+        <section class="interactive-map-section">
+            <div class="container">
+                <div class="map-container">
+                    <div class="map-header">
+                        <h2>MINERALS DEVELOPMENT FUND PROJECTS</h2>
+                        <p>Click on the map to explore projects in different regions</p>
+                    </div>
+                    <div class="map-wrapper">
+                        <div class="map-controls">
+                            <button class="map-btn" id="zoom-in"><i class="fas fa-search-plus"></i></button>
+                            <button class="map-btn" id="zoom-out"><i class="fas fa-search-minus"></i></button>
+                            <button class="map-btn" id="reset-map"><i class="fas fa-sync-alt"></i></button>
+                        </div>
+                        <div class="map-frame">
+                            <!-- Map will be loaded here -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1010299.1966666667!2d-1.5!3d8.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMDAnMDAuMCJOIDHCsDMwJzAwLjAiVw!5e0!3m2!1sen!2sgh!4v1645543212345!5m2!1sen!2sgh" 
+                                    width="100%" 
+                                    height="600" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-list">
+                    <h3>Featured Projects</h3>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/images/newsimages/newsimage4.jpg" alt="Project 1">
+                            </div>
+                            <div class="project-info">
+                                <h4>Project Title 1</h4>
+                                <p>Location: Region Name</p>
+                                <p>Status: Ongoing</p>
+                                <a href="#" class="project-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <!-- More project cards can be added here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="assets/images/mdflogo.png" alt="MDF Logo">
+                        <h2>Minerals Development Fund</h2>
+                        <p>Providing Financial Resources To Mining Community for sustainable development</p>
+                    </div>
+                    
+                </div>
+        
+                <div class="footer-section">
+                    <h4>Get In Touch</h4>
+                    <address>
+                       <p><i class="fa-solid fa-building"></i>  Minerals Developement fund</p>
+                       <p><i class="fa-solid fa-map-marker-alt"></i> No.2 Labone link, labone, Accra, Ghana</p>
+                         <p><i class="fa-solid fa-phone"></i> +233 552 487499</p>
+                         <p><i class="fa-solid fa-envelope"></i> info@mdf.gov.gh</p>
+                            <p><i class="fa-solid fa-clock"></i> Mon - Fri: 8:00 AM - 5:00 PM</p>
+                    </address>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./profile.html">About Us</a></li>
+                        <li><a href="#operation">Operations</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./downloads.html">Downloads</a></li>
+                        <li><a href="./links.html">Links</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./news.html">News/Documentary</a></li>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-media">
+                        <a href="https://web.facebook.com/p/Minerals-Development-Fund-100075951260058/?_rdc=1&_rdr"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://x.com/MDF_GHANA"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/mineralsdevelopmentfund/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Minerals Development Fund. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/interactive.js"></script>
+</body>
+</html> 

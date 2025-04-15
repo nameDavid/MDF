@@ -70,7 +70,6 @@ h2::after {
 .disbursement-content {
     background: #fff;
     padding: 2rem;
-    border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -84,7 +83,6 @@ h2::after {
 .disbursement-item {
     background: #f8f9fa;
     padding: 1.5rem;
-    border-radius: 8px;
     transition: transform 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -260,4 +258,54 @@ h2::after {
 .scroll-reveal.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Disbursement Chart Styles */
+.disbursement-chart {
+    margin: 4rem 0;
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.disbursement-chart h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.disbursement-chart h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #ff3333;
+    margin: 1rem auto;
+}
+
+.flow-chart {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.flow-chart:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments for the chart */
+@media (max-width: 768px) {
+    .disbursement-chart {
+        margin: 2rem 0;
+        padding: 1rem;
+    }
+
+    .disbursement-chart h3 {
+        font-size: 1.5rem;
+    }
 } 
